@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:22.04
 
 RUN apt-get update \
   && apt-get -y install \
@@ -14,12 +14,13 @@ ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 
 RUN pip3 install --no-cache \
-    Pillow==9.0.1 \
-    click==7.1.1 \
-    markdown==3.2.1 \
-    markdown-include==0.5.1 \
-    weasyprint==51 \
-    watchdog==0.10.2
+    Pillow \
+    click \
+    markdown \
+    markdown-include \
+    weasyprint \
+    watchdog \
+    -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 RUN mkdir /app
 
