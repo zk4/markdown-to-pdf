@@ -1,0 +1,6 @@
+Pillow==9.0.1
+click==7.1.1
+markdown==3.2.1
+markdown-include==0.5.1
+weasyprint==51
+watchdog==0.10.2

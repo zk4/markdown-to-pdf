@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:22.04
 
 RUN apt-get update \
   && apt-get -y install \
@@ -18,8 +18,9 @@ RUN pip3 install --no-cache \
     click==7.1.1 \
     markdown==3.2.1 \
     markdown-include==0.5.1 \
-    weasyprint==51 \
-    watchdog==0.10.2
+    weasyprint==57 \
+    watchdog==0.10.2 \
+    -i https://pypi.douban.com/simple
 
 RUN mkdir /app
 
